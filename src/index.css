@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.content-div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+}
+
+.content-div:hover {
+  background-image: linear-gradient(
+    to right,
+    rgba(112, 157, 255, 0.8),
+    hsla(242, 74%, 61%, 0.8)
+  ) !important;
+}
+.Card .heading h1 {
+  font-size: 40px;
+}
+.Card .content {
+  max-width: 85%;
+  margin: auto;
+}
+.Card .box {
+  padding: 40px;
+}
+.Card hr {
+  margin: 30px 0 30px 0;
+  border: 1px solid #e3e9ed;
+  background-color: #e3e9ed;
+}
+
+.Card p {
+  font-size: 18px;
+  transition: 0.5s;
+}
+.Card .box {
+  margin-bottom: 40px;
+  position: relative;
+}
+.Card .btn_shadow:hover {
+  transform: translate(0);
+}
+.Card .box:hover .btn_shadow {
+  background: #ff3a75;
+  box-shadow: none;
+  color: white;
+}
+.Card .box:hover p {
+  color: white;
+}
+.Card .content-section {
+  position: relative;
+}
+.Card .left {
+  position: relative;
+}
+.Card .left::after {
+  content: "";
+  position: absolute;
+  top: 16%;
+  left: 0;
+  height: 118vh;
+  width: 5px;
+  background: #d9dee2;
+  z-index: -2;
+}
+.Card .box::after {
+  content: "";
+  position: absolute;
+  top: 13%;
+  left: -8%;
+  height: 5px;
+  width: 50px;
+  background: #d9dee2;
+}
+.Card .box::before {
+  content: "";
+  position: absolute;
+  top: 11%;
+  left: -10%;
+  height: 10px;
+  width: 10px;
+  background: #fff;
+  border: 5px solid #d9dee2;
+  border-radius: 50%;
+  z-index: 5;
+  transition: 0.5s;
+}
+.Card .box:hover.box:before {
+  background: #ff3a75;
+}
+@media (max-width: 768px) {
+  .Card .d_flex {
+    flex-direction: column;
+  }
+  .Card .left::after {
+    top: 14%;
+    height: 105vh;
+  }
+}
